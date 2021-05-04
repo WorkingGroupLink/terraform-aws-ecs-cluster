@@ -106,7 +106,7 @@ resource "aws_launch_configuration" "main" {
 echo 'ECS_CLUSTER=${aws_ecs_cluster.main.name}' >> /etc/ecs/ecs.config
 
 # Disable privileged containers.
-echo 'ECS_DISABLE_PRIVILEGED=true' >> /etc/ecs/ecs.config
+# echo 'ECS_DISABLE_PRIVILEGED=true' >> /etc/ecs/ecs.config
 
 # Any extra user data scripts to execute
 ${var.user_data}
